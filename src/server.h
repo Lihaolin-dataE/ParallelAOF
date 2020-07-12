@@ -49,6 +49,8 @@
 #include <lua.h>
 #include <signal.h>
 
+#include "stdbool.h"  /* Resolve type 'bool' */
+
 typedef long long mstime_t; /* millisecond time type. */
 typedef long long ustime_t; /* microsecond time type. */
 
@@ -1659,6 +1661,11 @@ int checkpaoffile(int file_count);
 int checktemppaoffile(int file_count);
 int get_paoffile_cnt();
 int get_temppaoffile_cnt();
+
+void loadData_parallel_aof(void);
+void _loadData_parallel_aof(void);
+void __loadData_parallel_aof(void);
+
 
 
 /* AOF persistence */
